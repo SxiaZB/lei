@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lei.smart.mapper.WebchatSchoolMapper">
-  <resultMap id="BaseResultMap" type="com.lei.smart.pojo.WebchatSchool">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <id column="sCode" jdbcType="VARCHAR" property="sCode" />
-    <result column="sName" jdbcType="VARCHAR" property="sName" />
-    <result column="sDescription" jdbcType="VARCHAR" property="sDescription" />
-    <result column="sAddress" jdbcType="VARCHAR" property="sAddress" />
-    <result column="sPostCode" jdbcType="VARCHAR" property="sPostCode" />
-    <result column="sPhone" jdbcType="INTEGER" property="sPhone" />
-    <result column="sFax" jdbcType="VARCHAR" property="sFax" />
-    <result column="sHomePage" jdbcType="VARCHAR" property="sHomePage" />
-    <result column="sMemo" jdbcType="VARCHAR" property="sMemo" />
-    <result column="bValid" jdbcType="INTEGER" property="bValid" />
-    <result column="sSchoolEnglishName" jdbcType="VARCHAR" property="sSchoolEnglishName" />
-    <result column="sorder" jdbcType="INTEGER" property="sorder" />
-  </resultMap>
-  <sql id="Base_Column_List">
+    <resultMap id="BaseResultMap" type="com.lei.smart.pojo.WebchatSchool">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <id column="sCode" jdbcType="VARCHAR" property="sCode"/>
+        <result column="sName" jdbcType="VARCHAR" property="sName"/>
+        <result column="sDescription" jdbcType="VARCHAR" property="sDescription"/>
+        <result column="sAddress" jdbcType="VARCHAR" property="sAddress"/>
+        <result column="sPostCode" jdbcType="VARCHAR" property="sPostCode"/>
+        <result column="sPhone" jdbcType="INTEGER" property="sPhone"/>
+        <result column="sFax" jdbcType="VARCHAR" property="sFax"/>
+        <result column="sHomePage" jdbcType="VARCHAR" property="sHomePage"/>
+        <result column="sMemo" jdbcType="VARCHAR" property="sMemo"/>
+        <result column="bValid" jdbcType="INTEGER" property="bValid"/>
+        <result column="sSchoolEnglishName" jdbcType="VARCHAR" property="sSchoolEnglishName"/>
+        <result column="sorder" jdbcType="INTEGER" property="sorder"/>
+    </resultMap>
+    <sql id="Base_Column_List">
     id, sCode, sName, sDescription, sAddress, sPostCode, sPhone, sFax, sHomePage, sMemo, 
     bValid, sSchoolEnglishName, sorder
   </sql>
-  <select id="selectByPrimaryKey" parameterType="com.lei.smart.pojo.WebchatSchoolKey" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from webchat_school
-    where id = #{id,jdbcType=INTEGER}
-      and sCode = #{sCode,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.lei.smart.pojo.WebchatSchoolKey">
+    <select id="selectByPrimaryKey" parameterType="com.lei.smart.pojo.WebchatSchoolKey" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from webchat_school
+        where id = #{id,jdbcType=INTEGER}
+        and sCode = #{sCode,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="com.lei.smart.pojo.WebchatSchoolKey">
     delete from webchat_school
     where id = #{id,jdbcType=INTEGER}
       and sCode = #{sCode,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.lei.smart.pojo.WebchatSchool">
+    <insert id="insert" parameterType="com.lei.smart.pojo.WebchatSchool">
     insert into webchat_school (id, sCode, sName, 
       sDescription, sAddress, sPostCode, 
       sPhone, sFax, sHomePage, 
@@ -44,132 +44,132 @@
       #{sMemo,jdbcType=VARCHAR}, #{bValid,jdbcType=INTEGER}, #{sSchoolEnglishName,jdbcType=VARCHAR}, 
       #{sorder,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.lei.smart.pojo.WebchatSchool">
-    insert into webchat_school
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="sCode != null">
-        sCode,
-      </if>
-      <if test="sName != null">
-        sName,
-      </if>
-      <if test="sDescription != null">
-        sDescription,
-      </if>
-      <if test="sAddress != null">
-        sAddress,
-      </if>
-      <if test="sPostCode != null">
-        sPostCode,
-      </if>
-      <if test="sPhone != null">
-        sPhone,
-      </if>
-      <if test="sFax != null">
-        sFax,
-      </if>
-      <if test="sHomePage != null">
-        sHomePage,
-      </if>
-      <if test="sMemo != null">
-        sMemo,
-      </if>
-      <if test="bValid != null">
-        bValid,
-      </if>
-      <if test="sSchoolEnglishName != null">
-        sSchoolEnglishName,
-      </if>
-      <if test="sorder != null">
-        sorder,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="sCode != null">
-        #{sCode,jdbcType=VARCHAR},
-      </if>
-      <if test="sName != null">
-        #{sName,jdbcType=VARCHAR},
-      </if>
-      <if test="sDescription != null">
-        #{sDescription,jdbcType=VARCHAR},
-      </if>
-      <if test="sAddress != null">
-        #{sAddress,jdbcType=VARCHAR},
-      </if>
-      <if test="sPostCode != null">
-        #{sPostCode,jdbcType=VARCHAR},
-      </if>
-      <if test="sPhone != null">
-        #{sPhone,jdbcType=INTEGER},
-      </if>
-      <if test="sFax != null">
-        #{sFax,jdbcType=VARCHAR},
-      </if>
-      <if test="sHomePage != null">
-        #{sHomePage,jdbcType=VARCHAR},
-      </if>
-      <if test="sMemo != null">
-        #{sMemo,jdbcType=VARCHAR},
-      </if>
-      <if test="bValid != null">
-        #{bValid,jdbcType=INTEGER},
-      </if>
-      <if test="sSchoolEnglishName != null">
-        #{sSchoolEnglishName,jdbcType=VARCHAR},
-      </if>
-      <if test="sorder != null">
-        #{sorder,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lei.smart.pojo.WebchatSchool">
-    update webchat_school
-    <set>
-      <if test="sName != null">
-        sName = #{sName,jdbcType=VARCHAR},
-      </if>
-      <if test="sDescription != null">
-        sDescription = #{sDescription,jdbcType=VARCHAR},
-      </if>
-      <if test="sAddress != null">
-        sAddress = #{sAddress,jdbcType=VARCHAR},
-      </if>
-      <if test="sPostCode != null">
-        sPostCode = #{sPostCode,jdbcType=VARCHAR},
-      </if>
-      <if test="sPhone != null">
-        sPhone = #{sPhone,jdbcType=INTEGER},
-      </if>
-      <if test="sFax != null">
-        sFax = #{sFax,jdbcType=VARCHAR},
-      </if>
-      <if test="sHomePage != null">
-        sHomePage = #{sHomePage,jdbcType=VARCHAR},
-      </if>
-      <if test="sMemo != null">
-        sMemo = #{sMemo,jdbcType=VARCHAR},
-      </if>
-      <if test="bValid != null">
-        bValid = #{bValid,jdbcType=INTEGER},
-      </if>
-      <if test="sSchoolEnglishName != null">
-        sSchoolEnglishName = #{sSchoolEnglishName,jdbcType=VARCHAR},
-      </if>
-      <if test="sorder != null">
-        sorder = #{sorder,jdbcType=INTEGER},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-      and sCode = #{sCode,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.lei.smart.pojo.WebchatSchool">
+    <insert id="insertSelective" parameterType="com.lei.smart.pojo.WebchatSchool">
+        insert into webchat_school
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="sCode != null">
+                sCode,
+            </if>
+            <if test="sName != null">
+                sName,
+            </if>
+            <if test="sDescription != null">
+                sDescription,
+            </if>
+            <if test="sAddress != null">
+                sAddress,
+            </if>
+            <if test="sPostCode != null">
+                sPostCode,
+            </if>
+            <if test="sPhone != null">
+                sPhone,
+            </if>
+            <if test="sFax != null">
+                sFax,
+            </if>
+            <if test="sHomePage != null">
+                sHomePage,
+            </if>
+            <if test="sMemo != null">
+                sMemo,
+            </if>
+            <if test="bValid != null">
+                bValid,
+            </if>
+            <if test="sSchoolEnglishName != null">
+                sSchoolEnglishName,
+            </if>
+            <if test="sorder != null">
+                sorder,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="sCode != null">
+                #{sCode,jdbcType=VARCHAR},
+            </if>
+            <if test="sName != null">
+                #{sName,jdbcType=VARCHAR},
+            </if>
+            <if test="sDescription != null">
+                #{sDescription,jdbcType=VARCHAR},
+            </if>
+            <if test="sAddress != null">
+                #{sAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="sPostCode != null">
+                #{sPostCode,jdbcType=VARCHAR},
+            </if>
+            <if test="sPhone != null">
+                #{sPhone,jdbcType=INTEGER},
+            </if>
+            <if test="sFax != null">
+                #{sFax,jdbcType=VARCHAR},
+            </if>
+            <if test="sHomePage != null">
+                #{sHomePage,jdbcType=VARCHAR},
+            </if>
+            <if test="sMemo != null">
+                #{sMemo,jdbcType=VARCHAR},
+            </if>
+            <if test="bValid != null">
+                #{bValid,jdbcType=INTEGER},
+            </if>
+            <if test="sSchoolEnglishName != null">
+                #{sSchoolEnglishName,jdbcType=VARCHAR},
+            </if>
+            <if test="sorder != null">
+                #{sorder,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.lei.smart.pojo.WebchatSchool">
+        update webchat_school
+        <set>
+            <if test="sName != null">
+                sName = #{sName,jdbcType=VARCHAR},
+            </if>
+            <if test="sDescription != null">
+                sDescription = #{sDescription,jdbcType=VARCHAR},
+            </if>
+            <if test="sAddress != null">
+                sAddress = #{sAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="sPostCode != null">
+                sPostCode = #{sPostCode,jdbcType=VARCHAR},
+            </if>
+            <if test="sPhone != null">
+                sPhone = #{sPhone,jdbcType=INTEGER},
+            </if>
+            <if test="sFax != null">
+                sFax = #{sFax,jdbcType=VARCHAR},
+            </if>
+            <if test="sHomePage != null">
+                sHomePage = #{sHomePage,jdbcType=VARCHAR},
+            </if>
+            <if test="sMemo != null">
+                sMemo = #{sMemo,jdbcType=VARCHAR},
+            </if>
+            <if test="bValid != null">
+                bValid = #{bValid,jdbcType=INTEGER},
+            </if>
+            <if test="sSchoolEnglishName != null">
+                sSchoolEnglishName = #{sSchoolEnglishName,jdbcType=VARCHAR},
+            </if>
+            <if test="sorder != null">
+                sorder = #{sorder,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+        and sCode = #{sCode,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.lei.smart.pojo.WebchatSchool">
     update webchat_school
     set sName = #{sName,jdbcType=VARCHAR},
       sDescription = #{sDescription,jdbcType=VARCHAR},

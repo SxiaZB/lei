@@ -8,10 +8,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>lei-app</artifactId>
-    <packaging>jar</packaging>
-    <dependencies>
 
+    <artifactId>lei-portal</artifactId>
+    <dependencies>
         <!-- 服务调用 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -28,5 +27,6 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
 
 </project>

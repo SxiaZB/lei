@@ -18,6 +18,7 @@
         <module>lei-app</module>
         <module>lei-framework-notranstation</module>
         <module>lei-framework-istranstation</module>
+        <module>lei-portal</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -122,8 +123,8 @@
 
 
         <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-ribbon</artifactId>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-ribbon</artifactId>-->
         <!--</dependency>-->
 
 
@@ -218,7 +219,6 @@
         </dependency>
 
     </dependencies>
-
 
 
     <build>

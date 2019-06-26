@@ -1,6 +1,7 @@
-package com.lei.smart.wxcontroller;
+package com.lei.smart.controller;
 
-import org.springframework.stereotype.Controller;
+import com.lei.smart.remote.RestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,8 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class DemoController {
+    @Autowired
+    private RestService restService;
     @GetMapping("demo")
     public String getDemo() {
-        return "app-remote-dingjianlei";
+        return restService.getRemote();
     }
 }

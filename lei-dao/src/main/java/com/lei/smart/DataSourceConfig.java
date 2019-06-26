@@ -75,6 +75,7 @@ public class DataSourceConfig {
     public DataSourceProperties remixedDataSourceProperties() {
         return new DataSourceProperties();
     }
+
     @Bean(name = "remixedDataSource")
     @Primary
     public DataSource remixedDataSource(@Qualifier("remixedDataSourceProperties") DataSourceProperties dataSourceProperties) {
