@@ -16,4 +16,8 @@ public class DemoController {
     public String getDemo() {
         return restService.getRemote();
     }
+    @GetMapping("demo2")
+    public String getDemo2() {
+        return "demo2";
+    }
 }

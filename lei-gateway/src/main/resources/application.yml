@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: lei-gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+zuul:
+  routes:
+    api-a:
+      path: /app-client/**
+      serviceId: app-client
+    api-b:
+      path: /portal-client/**
+      serviceId: portal-client

@@ -38,9 +38,7 @@
         <java.version>1.8</java.version>
         <!--<spring-cloud.version>Dalston.SR1</spring-cloud.version>-->
         <!--<spring-cloud.version>Finchley.SR2</spring-cloud.version>-->
-        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
-
-        <docker.image.prefix>yn_vps</docker.image.prefix>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <skipTests>true</skipTests><!--添加 -->
 
     </properties>
@@ -55,6 +53,20 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
