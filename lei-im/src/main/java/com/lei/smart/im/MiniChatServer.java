@@ -42,10 +42,8 @@ public class MiniChatServer extends BaseServer {
                 .option(ChannelOption.SO_BACKLOG, 1024)
                 .localAddress(new InetSocketAddress(port))
                 .childHandler(new ChannelInitializer<SocketChannel>() {
-
                     @Override
                     protected void initChannel(SocketChannel ch) throws Exception {
-//                        ch.pipeline().addLast(business,new MessageHandler());
                         ch.pipeline().addLast(defLoopGroup,
                                 new HttpServerCodec(),   //请求解码器
                                 new HttpObjectAggregator(65536),//将多个消息转换成单一的消息对象

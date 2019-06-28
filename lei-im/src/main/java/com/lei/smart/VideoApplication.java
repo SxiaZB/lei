@@ -35,8 +35,8 @@ public class VideoApplication implements CommandLineRunner {
 
 //        SchedultaskController schedultaskController = SpringApplicationContextUtil.getBean(SchedultaskController.class);
 //        WebSocketClientUtil.clientCompose= WebSocketClientUtil.getWebsocket();
-        MiniChatServer ws =new MiniChatServer();
-        logger.info("Netty's ws server is listen: "+port);
+        MiniChatServer ws = new MiniChatServer();
+        logger.info("Netty's ws server is listen: " + port);
         ws.init();
         ws.start(port);
         Runtime.getRuntime().addShutdownHook(new Thread() {

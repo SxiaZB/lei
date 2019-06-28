@@ -52,7 +52,7 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table schema="lei" tableName="lei_user" domainObjectName="User"
+        <table schema="mini" tableName="webchat_school" domainObjectName="WebchatSchool"
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false" enableUpdateByPrimaryKey="true"
                enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"

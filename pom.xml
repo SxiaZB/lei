@@ -19,6 +19,7 @@
         <module>lei-framework-notranstation</module>
         <module>lei-framework-istranstation</module>
         <module>lei-portal</module>
+        <module>lei-demo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -68,6 +69,11 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.3.2</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -248,7 +254,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.39</version>
+                        <version>8.0.15</version>
                     </dependency>
                     <dependency>
                         <groupId>org.mybatis.generator</groupId>
