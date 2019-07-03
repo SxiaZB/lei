@@ -5,17 +5,41 @@
 为了更快进行开发，搭建了一套适合后台的脚手架lei，前后端分离，restful风格接口开发，适合二次开发，主要包含以下模块。
 
 > * 常见cloud模块  全家桶 注册中心 熔断 降级 网关等等
-> * 集成常见java后台框架 mongodb  redis  mq zookeeper注册发现等等
+> * 集成常见java集成
+> * springboot 集成kafka
+> * springboot 集成es 实现全文检索
+> * springboot 初步实现zookeeper注册发现
+> * springboot 集成mongodb
+> * springboot 集成redis
+> * springboot 集成常见mq
 > * 基于netty的websocket拓展
 > * sso单点登录
 > * 常见功能 限流 分布式锁的实现等
-> * 分库分表核心jar包实现 以及分库产生的跨库事物等
+> * 基于client 模式的分库+分表核心jar包实现 以及分库产生的跨库事物等
 > * 单机分布式事物框架整合 atomikos处理多数据源分布式事物
 > * 还有其他功能待整合。
 
 ------
 
 # 以下一些思路分享
+# ** elasticsearch 常见查询
+```
+1. match match_phrase term
+match 全文模糊匹配  分词 适用于text 例如 i am ding  分词设置 i  am  ding三个词 当match时候  i happy 也能搜到  happy world也能搜到
+
+
+match_phrase 短语匹配 i am happy  分词成i am happy  当搜索 am happy 搜到 因为短语匹配
+
+
+
+term 精确匹配 i am happy  分词成i am happy  当搜索 am happy 搜不到 因为没有分词设置
+
+
+2.bool 查询  高级查询
+
+
+must / mustnot/filter等太简单 自己查询即可
+```
 
 # ** 基于redission分布式锁demo  模拟100线程同时插入
 
