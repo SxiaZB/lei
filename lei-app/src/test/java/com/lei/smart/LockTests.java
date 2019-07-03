@@ -23,7 +23,7 @@ import java.util.concurrent.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
-public class WebchatServiceTests {
+public class LockTests {
     @Autowired
     UserMapper userMapper;
 
@@ -33,7 +33,6 @@ public class WebchatServiceTests {
         config.useSentinelServers().addSentinelAddress("172.22.31.82:26379", "172.22.31.82:26380",
                 "172.22.31.82:26381")
                 .setMasterName("mymaster");
-//        CountDownLatch countDownLatch =new CountDownLatch(1);
         RedissonClient redissonClient = Redisson.create(config);
         ExecutorService executorService = Executors.newFixedThreadPool(100);
         CyclicBarrier cyclicBarrier = new CyclicBarrier(100);
