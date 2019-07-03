@@ -7,6 +7,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.util.concurrent.ListenableFuture;
+import org.springframework.util.concurrent.SuccessCallback;
 
 import java.util.Date;
 import java.util.UUID;
@@ -24,7 +25,8 @@ public class Producer {
         message.setId("KFK_"+System.currentTimeMillis());
         message.setMsg(msg);
         message.setSendTime(new Date());
-        ListenableFuture my_test_topic = kafkaTemplate.send("TEST", gson.toJson(message));
-
+        ListenableFuture future = kafkaTemplate.send("TEST", gson.toJson(message));
+//        SuccessCallback<? super T> successCallback = ;
+//        future.addCallback(successCallback);
     }
 }
