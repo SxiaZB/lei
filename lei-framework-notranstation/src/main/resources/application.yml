@@ -1,0 +1,4 @@
+#设置网关端口号
+spring:
+  profiles:
+    active: dev

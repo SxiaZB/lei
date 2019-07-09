@@ -1,20 +1,27 @@
 package com.lei.smart;
 
+import com.lei.smart.util.SnowflakeIdWorker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
 @ServletComponentScan
-@EnableEurekaClient
 @Slf4j
+@EnableAspectJAutoProxy(proxyTargetClass = true)
+
 public class AppStartApplication {
+
+    @Bean
+    public SnowflakeIdWorker getSnow(){
+        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 0);
+          return idWorker;
+    }
     public static void main(String[] args) {
-        SpringApplication.run(AppStartApplication.class, args);
+        SpringApplication.run(IsTranstationStartApplication.class, args);
     }
 
 }

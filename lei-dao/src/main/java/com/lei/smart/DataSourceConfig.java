@@ -1,6 +1,7 @@
 package com.lei.smart;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -108,6 +109,8 @@ public class DataSourceConfig {
     @Primary
     public SqlSessionFactory remixedSqlSessionFactory(@Qualifier("remixedDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
+        TableSplitInterceptor interceptor = new TableSplitInterceptor();
+        factoryBean.setPlugins(new Interceptor[]{getPlu()});
         factoryBean.setDataSource(dataSource);
         factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*.xml"));
         return factoryBean.getObject();
@@ -124,5 +127,10 @@ public class DataSourceConfig {
     public SqlSessionTemplate remixedSqlSessionTemplate(@Qualifier("remixedSqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
         SqlSessionTemplate template = new SqlSessionTemplate(sqlSessionFactory);
         return template;
+    }
+    @Bean
+    public TableSplitInterceptor getPlu(){
+        TableSplitInterceptor tableSplitInterceptor =new TableSplitInterceptor();
+        return tableSplitInterceptor;
     }
 }

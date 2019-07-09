@@ -11,11 +11,12 @@
     <artifactId>lei-app</artifactId>
     <packaging>jar</packaging>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-        </dependency>
         <!-- 服务调用 -->
+        <dependency>
+            <groupId>com.lei</groupId>
+            <artifactId>lei-framework-istranstation</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>com.lei</groupId>
             <artifactId>lei-util</artifactId>
@@ -29,6 +30,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lei</groupId>
+            <artifactId>lei-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.lei</groupId>
