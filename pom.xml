@@ -20,6 +20,7 @@
         <module>lei-framework-istranstation</module>
         <module>lei-portal</module>
         <module>lei-demo</module>
+        <module>lei-sso</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

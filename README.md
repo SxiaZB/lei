@@ -35,7 +35,20 @@
 - [ ] vue整合 前后端分离
 - [ ] nginx负载
 
-
+### 2. 项目模块介绍 
+-  lei-api 对外暴露接口
+-  lei-app  web rest接口
+-  lei-common 一些公共工具包
+-  lei-dao 普通mybatis配置 单库查询 mysql查询
+-  lei-eurake 注册中心
+-  lei-framework-istranstation 解决单机分布式事物 支持同一Transcation 切库操作 并支持多库事物
+-  lei-framework-notranstation 解决读写分离 支持主库事物 从库查询不支持事物
+-  lei-gateway  网关系统
+-  lei-im  基于netty websocket 长连接 推送 im即时通讯
+-  lei-job 定时任务
+-  lei-portal 门户首页
+-  lei-service  服务逻辑层
+-  lei-sso 单点登录系统
 
 
 # 以下一些思路分享
