@@ -11,12 +11,18 @@
     <artifactId>lei-app</artifactId>
     <packaging>jar</packaging>
     <dependencies>
+
         <!-- 服务调用 -->
         <dependency>
             <groupId>com.lei</groupId>
-            <artifactId>lei-framework-istranstation</artifactId>
+            <artifactId>lei-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.lei</groupId>-->
+            <!--<artifactId>lei-framework-istranstation</artifactId>-->
+            <!--<version>0.0.1-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.lei</groupId>
             <artifactId>lei-util</artifactId>

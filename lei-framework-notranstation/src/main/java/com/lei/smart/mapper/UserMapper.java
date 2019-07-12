@@ -1,7 +1,7 @@
 package com.lei.smart.mapper;
 
-import com.lei.smart.config.DataSource;
-import com.lei.smart.config.DataSources;
+import com.lei.smart.DataSource;
+import com.lei.smart.DataSources;
 import com.lei.smart.pojo.User;
 
 public interface UserMapper {

@@ -1,4 +1,4 @@
-package com.lei.smart.config;
+package com.lei.smart;
 
 import org.apache.ibatis.session.TransactionIsolationLevel;
 import org.apache.ibatis.transaction.Transaction;

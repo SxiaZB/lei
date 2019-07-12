@@ -1,4 +1,4 @@
-package com.lei.smart.config;
+package com.lei.smart;
 /**
  * 自定义事务注解
  * value为String类型数组，传入为定义的事务管理器

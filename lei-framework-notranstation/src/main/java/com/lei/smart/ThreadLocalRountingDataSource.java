@@ -1,4 +1,4 @@
-package com.lei.smart.config;
+package com.lei.smart;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

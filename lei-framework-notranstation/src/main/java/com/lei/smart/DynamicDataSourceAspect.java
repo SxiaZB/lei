@@ -1,4 +1,4 @@
-package com.lei.smart.config;
+package com.lei.smart;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;

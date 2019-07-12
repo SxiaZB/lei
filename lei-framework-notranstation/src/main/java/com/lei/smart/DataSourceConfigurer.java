@@ -1,4 +1,4 @@
-package com.lei.smart.config;
+package com.lei.smart;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;

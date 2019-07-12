@@ -1,4 +1,4 @@
-package com.lei.smart.config;
+package com.lei.smart;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

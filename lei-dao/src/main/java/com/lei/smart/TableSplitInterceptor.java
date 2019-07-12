@@ -1,6 +1,7 @@
 package com.lei.smart;
 import java.sql.Connection;
 import java.util.Properties;
+
 import com.lei.smart.util.StringUtil;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;
@@ -71,7 +72,7 @@ public class TableSplitInterceptor implements Interceptor {
                 //开始埋坑
                 String convertedSql=originalSql.replaceAll(tableSplit.value(), strategy.convert(tableSplit.value(),object,boundSql));
                 metaStatementHandler.setValue("delegate.boundSql.sql",convertedSql);
-                String convertSqlLog=StringUtil.deleteBlank(convertedSql);
+                String convertSqlLog= StringUtil.deleteBlank(convertedSql);
                 logger.info("分表后的SQL："+convertSqlLog);
             }
         }

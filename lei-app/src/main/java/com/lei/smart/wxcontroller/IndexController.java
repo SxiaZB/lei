@@ -1,6 +1,7 @@
 package com.lei.smart.wxcontroller;
 
 import com.lei.smart.UserService;
+import com.lei.smart.ResponseResultVO;
 import com.lei.smart.kafka.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,20 +11,21 @@ import org.springframework.web.bind.annotation.RestController;
  * this is demo test
  */
 @RestController
-public class DemoController {
+public class IndexController {
     @Autowired
     private Producer producer;
     @Autowired
     private UserService userService;
 
     @GetMapping("demo")
-    public String getDemo() {
-        return "app-remote-dingjianlei";
+    public ResponseResultVO getDemo() {
+        return userService.testException();
     }
+
     @GetMapping("insertUser")
     public String insertUser() {
-         userService.insert();
-         return "success";
+        userService.insert();
+        return "success";
     }
 
 

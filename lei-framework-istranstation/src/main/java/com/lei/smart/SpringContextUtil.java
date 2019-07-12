@@ -1,4 +1,4 @@
-package com.lei.smart.config;
+package com.lei.smart;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;

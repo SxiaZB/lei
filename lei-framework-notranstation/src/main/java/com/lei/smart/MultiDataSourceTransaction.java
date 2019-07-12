@@ -1,4 +1,4 @@
-package com.lei.smart.config;
+package com.lei.smart;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

@@ -1,4 +1,4 @@
-package com.lei.smart.config;//package com.ucan.framework.dataSource;
+package com.lei.smart;//package com.ucan.framework.dataSource;
 //
 //import org.apache.commons.lang3.ArrayUtils;
 //import org.apache.logging.log4j.LogManager;

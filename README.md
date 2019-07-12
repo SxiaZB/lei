@@ -45,7 +45,7 @@
 -  lei-framework-notranstation 解决读写分离 支持主库事物 从库查询不支持事物
 -  lei-gateway  网关系统
 -  lei-im  基于netty websocket 长连接 推送 im即时通讯
--  lei-job 定时任务
+-  lei-job 定时任务+kafka消费
 -  lei-portal 门户首页
 -  lei-service  服务逻辑层
 -  lei-sso 单点登录系统

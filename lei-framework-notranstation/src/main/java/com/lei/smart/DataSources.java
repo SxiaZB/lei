@@ -1,4 +1,4 @@
-package com.lei.smart.config;
+package com.lei.smart;
 
 /**
  * 数据源类型
